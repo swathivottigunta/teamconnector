@@ -10,10 +10,14 @@ const User = require('../../models/User');
 // @desc   Get current users profile
 // @access public
 
-router.get('/', auth, async (req, res) => {
+router.get('/me', auth, async (req, res) => {
   try {
-    const profile = await (await Profile.findOne({ user: req.user.id })).populate('user',);
+    const profile = await Profile.findOne({
+      user: req.user.id,
+    }).populate('user', ['name', 'avatar']);
 
+    if (!profile) res.status(400).json({ msg: 'No Profile for this user' });
+    else res.json(profile);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
