@@ -8,6 +8,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/profile-form/CreateProfile';
 import PrivaeRoute from './components/routing/PrivaeRoute';
 
 //Redux
@@ -37,6 +38,11 @@ const App = () => {
               <Route exact path='/Register' component={Register} />
               <Route exact path='/Login' component={Login} />
               <PrivaeRoute exact path='/dashboard' component={Dashboard} />
+              <PrivaeRoute
+                exact
+                path='/create-profile'
+                component={CreateProfile}
+              />
             </Switch>
           </section>
         </Fragment>
