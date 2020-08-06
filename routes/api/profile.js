@@ -12,7 +12,7 @@ const User = require('../../models/User');
 
 // @route  GET api/profile/me
 // @desc   Get current users profile
-// @access public
+// @access private
 
 router.get('/me', auth, async (req, res) => {
   try {
@@ -26,7 +26,6 @@ router.get('/me', auth, async (req, res) => {
     console.error(err.message);
     res.status(500).send('Server Error');
   }
-  res.send('Profile route');
 });
 
 // @route  Post api/profile/
@@ -86,7 +85,6 @@ router.post(
 
     try {
       let profile = await Profile.findOne({ user: req.user.id });
-
       if (profile) {
         //update
         profile = await Profile.findOneAndUpdate(
@@ -95,15 +93,15 @@ router.post(
           { new: true }
         );
         console.log('update');
-        return res.json(profile);
+        res.json(profile);
+      } else {
+        //Create
+        profile = new Profile(profilefields);
+
+        await profile.save();
+        console.log('new');
+        res.json(profile);
       }
-
-      //Create
-      profile = new Profile(profilefields);
-
-      await profile.save();
-      console.log('new');
-      res.json(profile);
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');
