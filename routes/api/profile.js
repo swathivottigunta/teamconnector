@@ -72,7 +72,10 @@ router.post(
     if (status) profilefields.status = status;
     if (githubusername) profilefields.githubusername = githubusername;
     if (skills) {
-      profilefields.skills = skills.split(',').map((skill) => skill.trim(''));
+      if (Array.isArray(skills))
+        profilefields.skills = skills.map((skill) => skill.trim(''));
+      else
+        profilefields.skills = skills.split(',').map((skill) => skill.trim(''));
     }
 
     // Build Social object

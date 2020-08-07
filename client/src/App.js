@@ -10,6 +10,8 @@ import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-form/CreateProfile';
 import EditProfile from './components/profile-form/EditProfile';
+import AddExperience from './components/profile-form/AddExperience';
+import AddEducation from './components/profile-form/AddEduction';
 import PrivaeRoute from './components/routing/PrivaeRoute';
 
 //Redux
@@ -45,6 +47,16 @@ const App = () => {
                 component={CreateProfile}
               />
               <PrivaeRoute exact path='/edit-profile' component={EditProfile} />
+              <PrivaeRoute
+                exact
+                path='/add-experience'
+                component={AddExperience}
+              />
+              <PrivaeRoute
+                exact
+                path='/add-education'
+                component={AddEducation}
+              />
             </Switch>
           </section>
         </Fragment>
