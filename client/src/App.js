@@ -13,6 +13,7 @@ import EditProfile from './components/profile-form/EditProfile';
 import AddExperience from './components/profile-form/AddExperience';
 import AddEducation from './components/profile-form/AddEduction';
 import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
 import PrivaeRoute from './components/routing/PrivaeRoute';
 
 //Redux
@@ -42,6 +43,7 @@ const App = () => {
               <Route exact path='/Register' component={Register} />
               <Route exact path='/Login' component={Login} />
               <Route exact path='/Profiles' component={Profiles} />
+              <Route exact path='/Profile/:id' component={Profile} />
               <PrivaeRoute exact path='/dashboard' component={Dashboard} />
               <PrivaeRoute
                 exact
