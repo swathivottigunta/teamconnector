@@ -320,7 +320,6 @@ router.get('/github/:username', (req, res) => {
       method: 'GET',
       headers: { 'user-agent': 'node.js' },
     };
-
     request(options, (error, response, body) => {
       if (error) console.error(error);
 
