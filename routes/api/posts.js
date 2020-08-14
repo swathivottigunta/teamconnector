@@ -18,6 +18,7 @@ router.post(
   [auth, [check('text', 'Text is required').not().isEmpty()]],
   async (req, res) => {
     const errors = validationResult(req);
+    console.log(req.body);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
@@ -99,11 +100,11 @@ router.delete('/:id', auth, async (req, res) => {
   }
 });
 
-// @route  Put api/posts/like/:id
+// @route  Post api/posts/like/:id
 // @desc   Like a post
 // @access private
 
-router.put('/like/:id', auth, async (req, res) => {
+router.post('/like/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
