@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://swathi:swathi@teamconnector-thnww.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecret",
+  "githubClientId": "9aef9de2785927b72331",
+  "githubSecret": "769e183663e538f19f90c4bb2b3f2fce6c442bca"
+}
