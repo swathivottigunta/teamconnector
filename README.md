@@ -1,4 +1,4 @@
-# Team Connector - React, Redux, Express/Node, MongoDB, JWT, Bcrypt - 
+# Team Connector - React, Redux, Express/Node, MongoDB, JWT, Bcrypt
 
 This is the social network app for developers to connect with each other. 
 Developers can add/edit/view their profile(includes experience, education, fetch github projects using Web API), add a post(where developers can like the post, unlike the post, add a comment or delete comment on a post). 
@@ -8,6 +8,34 @@ Redux is used for state management.
 
 ## Preview
 This project is currently live at https://ancient-fortress-38467.herokuapp.com/
+
+## Features
+- Register / Login 
+- Developers - Lists all the developer profiles with github repos
+- Dashboard - The user can edit the profile/add education/add education
+- Posts - The user can create a post and add/delete comment
+
+### Register
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/register.PNG" width=75% height=75%>
+
+### Login
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/login.PNG" width=75% height=75%>
+
+### Developers
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/developers.PNG" width=75% height=75%>
+
+### Profile
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/profile.gif" width=75% height=75%>
+
+### Dashboard
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/dashboard.gif" width=75% height=75%>
+
+### posts
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/posts.gif" width=75% height=75%>
+
+### post details
+<img src="https://github.com/swathivottigunta/teamconnector/blob/master/assets/post-details.gif" width=75% height=75%>
+
 
 ## Dependencies
 ### Server
